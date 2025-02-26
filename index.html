@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+      <header>
+        <nav class="flex justify-center items-center mt-28">
+          <div class="relative justify-center items-center w-80">
+            <img class="absolute" src="./assets/bg.png" alt="" />
+            <img
+              class="absolute w-24 left-28 top-8"
+              src="./assets/Group.png"
+              alt=""
+            />
+          </div>
+        </nav>
+      </header>
+      <!-- login section -->
+      <section>
+        <div class=" min-h-screen mt-32">
+
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <fieldset class="fieldset">
+                  <label class="fieldset-label">Mobile Number</label>
+                  <input id="account-number" type="number" class="input" placeholder="Enter your number" required />
+                  <label class="fieldset-label">4 Digit Pin</label>
+                  <input value="1234" id="pin" type="text" class="input" placeholder="Enter 4 Digit Pin" required/>
+                  <div><a class="link link-hover">Forgot password?</a></div>
+                  <button id="login-btn" class="btn btn-neutral mt-4">Login</button>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script>
+        document.getElementById("login-btn")
+        .addEventListener('click', function(event){
+            event.preventDefault();
+            // console.log("Hey It's Mahiya")
+            const accountNumber = document.getElementById("account-number").value;
+            // console.log(accountNumber)
+            const pinId = document.getElementById("pin").value;
+            // console.log(accountNumber , pinId)
+            // console.log(accountNumber.length)
+            if(accountNumber.length === 11){
+              // console.log(typeof pinId)
+                // console.log('yes');
+                if(parseInt(pinId) === 1234){
+                  // alert('okay go on!')
+                  window.location.href = './main.html'
+                }
+                else{
+                  alert('not okay!')
+                }
+            }
+            else{
+                // alert("that's not valid account number")
+                alert("that's not valid account number")
+            }
+        })
+           
+    </script>
+    <script src="./script/login.js"></script>
+  </body>
+</html>
