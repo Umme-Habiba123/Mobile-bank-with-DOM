@@ -4,7 +4,7 @@ document.getElementById("btn-add-money")
     // console.log('button clicked')
    const amount = document.getElementById("amount").value;
     // console.log(typeof amount);
-    const convertedAmount = parseInt(amount);
+    const convertedAmount = parseFloat(amount);
     const pinn = document.getElementById("pin").value;
     const convertPin = parseInt(pinn);
     const mainBalance = document.getElementById("main-balance").innerText;
@@ -15,6 +15,12 @@ document.getElementById("btn-add-money")
         // console.log('All okay')
         const sum = convertedAmount + convertdMainBalance;
         document.getElementById("main-balance").innerText = sum;
+        const p = document.createElement('p');
+     p.innerText = `
+      added &{amount} from this ${account} account
+     `
+
+     console.log(p)
     }
     else{
        alert("enter valid pin")

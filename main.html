@@ -1,142 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>main</title>
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/ce4e831da4.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- daisyUi -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
-      <header>
-        <nav>
-          <div class="navbar shadow-sm">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="flex">
-                <img class="w-14 h-12 ml-5" src="./assets/Group.png" alt="" />
-                <div class="ml-1">
-                  <h2 class="text-2xl font-extrabold">$ <span id="main-balance">45000</span></h2>
-                  <p class="text-[#6e6d6d]">Available Balance</p>
-                </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>main</title>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/ce4e831da4.js" crossorigin="anonymous"></script>
+  <!-- daisyUi -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-800 ">
+  <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    <header>
+      <nav>
+        <div class="navbar shadow-sm">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
               </div>
             </div>
-            <div class="navbar-center hidden lg:flex"></div>
-            <div class="navbar-end">
-              <a class="btn border-r-4 text-[#6e6d6d] mb-10 mt-10"
-                ><i class="fa-solid fa-arrow-up-from-bracket text-[#6e6d6d]"></i
-                >Log Out</a
-              >
+            <div class="flex">
+              <img class="w-14 h-12 ml-5" src="./assets/Group.png" alt="" />
+              <div class="ml-1">
+                <h2 class="text-2xl font-extrabold">
+                  $ <span id="main-balance">4500</span>
+                </h2>
+                <p class="text-[#6e6d6d]">Available Balance</p>
+              </div>
             </div>
           </div>
-        </nav>
-      </header>
+          <div class="navbar-center hidden lg:flex"></div>
+          <div class="navbar-end">
+            <a class="btn border-r-4 text-[#6e6d6d] mb-10 mt-10"><i
+                class="fa-solid fa-arrow-up-from-bracket text-[#6e6d6d]"></i>Log Out</a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-         <!-- welcome payoooo -->
+    <!-- welcome payoooo -->
 
-      <div class="welcome payoo">
-        <h1 class="font-extrabold text-2xl mt-10 ml-3">
-          🔥 Welcome to Payooo!
-        </h1>
-        <p class="text-[#757474] text-sm mt-3 ml-5 mb-6">
-          Enjoy easy and convenient financial services with us. <br />
-          Cashout charge is low and
-        </p>
+    <div class="welcome payoo">
+      <h1 class="font-extrabold text-2xl mt-10 ml-3">
+        🔥 Welcome to Payooo!
+      </h1>
+      <p class="text-[#757474] text-sm mt-3 ml-5 mb-6">
+        Enjoy easy and convenient financial services with us. <br />
+        Cashout charge is low and
+      </p>
+    </div>
+    <!-- card section -->
+    <section class="card-container">
+      <div class="card grid grid-cols-3 m-2 text-center gap-1">
+        <div id="add-money-box" class="box cursor-pointer first-card pt-5 border rounded-xl">
+          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
+          <h3>Add Money</h3>
+        </div>
+        <div id="cash-out-money" class="second-card box cursor-pointer p-5 border rounded-xl">
+          <img class="mx-auto" src="./assets/money1.png" alt="" />
+          <h3>Cashout</h3>
+        </div>
+        <div class="third-card box cursor-pointer p-5 border rounded-xl">
+          <img class="mx-auto" src="./assets/transaction1.png" alt="" />
+          <h3 class="">Transfer Money</h3>
+        </div>
+        <div class="fourth-card box cursor-pointer p-5 border rounded-xl">
+          <img class="mx-auto" src="./assets/bonus1.png" alt="" />
+          <h3>Get Bonus</h3>
+        </div>
+        <div class="fifth-card box cursor-pointer p-5 border rounded-xl">
+          <img class="mx-auto" src="./assets/send1.png" alt="" />
+          <h3>Pay Bill</h3>
+        </div>
+        <div id="transaction-container" class="sixth-card box cursor-pointer p-5 border rounded-xl">
+          <img class="mx-auto" src="./assets/purse1.png" alt="" />
+          <h3>Transactions</h3>
+        </div>
       </div>
-        <!-- card section -->
-      <section class="card-container">
-        <div
-          class="card grid grid-cols-3 m-2 text-center  gap-1"
-        >
-          <div class="box cursor-pointer first-card pt-5 border rounded-xl">
-            <img class="mx-auto " src="./assets/wallet1.png" alt="" />
-            <h3>Add Money</h3>
-          </div>
-          <div class="second-card box cursor-pointer p-5 border rounded-xl">
-            <img class="mx-auto" src="./assets/money1.png" alt="" />
-            <h3>Cashout</h3>
-          </div>
-          <div class="third-card box cursor-pointer p-5 border rounded-xl">
-            <img class="mx-auto" src="./assets/transaction1.png" alt="" />
-            <h3 class="">Transfer Money</h3>
-          </div>
-          <div class="fourth-card box cursor-pointer p-5 border rounded-xl">
-            <img class="mx-auto" src="./assets/bonus1.png" alt="" />
-            <h3>Get Bonus</h3>
-          </div>
-          <div class="fifth-card box cursor-pointer p-5 border rounded-xl">
-            <img class="mx-auto" src="./assets/send1.png" alt="" />
-            <h3>Pay Bill</h3>
-          </div>
-          <div class="sixth-card box cursor-pointer p-5 border rounded-xl">
-            <img class="mx-auto" src="./assets/purse1.png" alt="" />
-            <h3>Transactions</h3>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h1 class="font-extrabold text-2xl mt-10 ml-3">Add Money</h1>
-        <!-- input (Add Money) section -->
-        <div class="mt-5 min-h-screen">
-          <div class="hero-content flex-col lg:flex-row-reverse">
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-              <div class="card-body">
-                <legend class="text-[#494848]">Select Bank</legend>
-                <select class="select">
-                  <option disabled selected >select Bank</option>
-                  <option value="B-kash">B-kash</option>
-                  <option value="Nagad">Nagad</option>
-                  <option value="DBBL">DBBL</option>
-                </select>
-
-                <fieldset class="fieldset">
-                  <label class="fieldset-label text-[#494848]">Bank Account Number</label>
-                  <input value="01873333199" type="number" class="input" placeholder="Enter 11 digit account number" />
-
-                  <label  class="fieldset-label text-[#494848]">Amount to Add</label>
-                  <input id="amount" type="number" class="input" placeholder="Add Amount to withdraw" />
-
-                  <label class="fieldset-label text-[#494848]">Pin Number</label>
-                  <input id="pin" type="number" class="input" placeholder="Enter 4 digit pin number " />
-                
-                  <button id="btn-add-money" class="btn btn-neutral mt-4 rounded-xl bg-blue-800 border-none">Add Money</button>
-                </fieldset>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </section>
 
+    <section id="add-money-sec">
+      <!-- input (Add Money) section -->
+      <h1 class="font-extrabold text-2xl mt-10 ml-3">Add Money</h1>
+      <!-- input (Add Money) section -->
+      <div class=" ">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div class="card-body">
+              <legend class="text-[#494848]">Select Bank</legend>
+              <select class="select">
+                <option disabled selected>select Bank</option>
+                <option value="B-kash">B-kash</option>
+                <option value="Nagad">Nagad</option>
+                <option value="DBBL">DBBL</option>
+              </select>
 
-    <script src="./script/add-money.js"></script>
-  </body>
+              <fieldset class="fieldset">
+                <label class="fieldset-label text-[#494848]">Bank Account Number</label>
+                <input value="01873333199" type="number" class="input" placeholder="Enter 11 digit account number" />
+
+                <label class="fieldset-label text-[#494848]">Amount to Add</label>
+                <input id="amount" type="number" class="input" placeholder="Add Amount to withdraw" />
+
+                <label class="fieldset-label text-[#494848]">Pin Number</label>
+                <input id="pin" type="number" class="input" placeholder="Enter 4 digit pin number " />
+
+                <button id="btn-add-money" class="btn btn-neutral mt-4 rounded-xl bg-blue-800 border-none">
+                  Add Money
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+             <!-- cash out section -->
+
+  <section id="cashout-box">
+    <fieldset class="fieldset max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+      <label class="fieldset-label text-[#494848]">Bank Account Number</label>
+      <input id="cashout-account" value="01873333199" type="number" class="input" placeholder="Enter 11 digit account number" />
+
+      <label class="fieldset-label text-[#494848]">Amount to Add</label>
+      <input id="cashout-amount" type="number" class="input" placeholder="Add Amount to withdraw" />
+
+      <label class="fieldset-label text-[#494848]">Pin Number</label>
+      <input id="cashout-pin" type="number" class="input" placeholder="Enter 4 digit pin number " />
+
+      <button id="cashout-btn" class="btn btn-neutral mt-4 rounded-xl bg-blue-800 border-none">
+        Add Money
+      </button>
+    </fieldset>
+  </section>
+
+  <!-- transaction section -->
+   <section id="transaction-box ">
+    <div class="max-w-md min-h-screen mx-auto  bg-slate-200">
+      <h1 class="  text-3xl font-bold text-red-700 p-3">Transactions History</h1>
+    <button id="trans-btn" class=" text-5xl bg-yellow-600 rounded-xl p-4">transaction</button>
+    </div>
+    <div id="transaction-contain">
+
+    </div>
+  
+  
+
+   </section>
+
+  <script src="./script/add-money.js"></script>
+  <script src="./script/toggle.js"></script>
+  <script src="./script/cashout.js"></script>
+  <script src="./script/addmoney2.js"></script>
+  <script src="./utilities/utilities.js"></script>
+  <script src="./script/cash-out2.js"></script>
+  <script src="./script/transaction.js"></script>
+  <script src="./script/togglle.js"></script>
+</body>
+
 </html>
